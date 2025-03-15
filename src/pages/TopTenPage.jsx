@@ -24,13 +24,16 @@ const TopGroupA = () => {
 
   return (
     <div className="p-5">
-      <h1 className="text-2xl font-bold mb-3">🏆 Top 10 students of group A</h1>
+      <h1 className="md:text-xl lg:text-2xl font-bold mb-3 ">🏆 Top 10 students of group A</h1>
       <table className="min-w-full border-collapse border border-gray-300 mt-5">
         <thead>
           <tr className="">
             <th className="border p-2">Rank</th>
             <th className="border p-2">SBD</th>
-            <th className="border p-2">Average Score</th>
+            <th className="border p-2">Total Score</th>
+            <th className="border p-2">Math</th>
+            <th className="border p-2">Physics</th>
+            <th className="border p-2">Chemistry</th>
           </tr>
         </thead>
         <tbody>
@@ -38,7 +41,10 @@ const TopGroupA = () => {
             <tr key={student.sbd} className="text-center border">
               <td className="border p-2 font-bold">{index + 1}</td>
               <td className="border p-2">{student.sbd}</td>
-              <td className="border p-2">{student.avg_score.toFixed(2)}</td>
+              <td className="border p-2">{student.toan + student.vat_li + student.hoa_hoc}</td>
+              <td className="border p-2">{student.toan}</td>
+              <td className="border p-2">{student.vat_li}</td>
+              <td className="border p-2">{student.hoa_hoc}</td>
             </tr>
           ))}
         </tbody>
