@@ -25,12 +25,12 @@ const TopGroupA = () => {
   return (
     <div className="p-5">
       <h1 className="text-2xl font-bold mb-3">🏆 Top 10 students of group A</h1>
-      <table className="min-w-full border-collapse border border-gray-300">
+      <table className="min-w-full border-collapse border border-gray-300 mt-5">
         <thead>
           <tr className="">
-            <th className="border p-2">Hạng</th>
+            <th className="border p-2">Rank</th>
             <th className="border p-2">SBD</th>
-            <th className="border p-2">Tổng điểm</th>
+            <th className="border p-2">Average Score</th>
           </tr>
         </thead>
         <tbody>
