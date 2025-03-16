@@ -10,15 +10,15 @@ const SearchScores = () => {
 
   const handleInputChange = (e) => {
     const value = e.target.value;
-    if (/^\d*$/.test(value)) {  // Chỉ cho phép số (dùng RegExp)
+    if (/^\d*$/.test(value)) {  
       setRegistrationNumber(value);
-      setError(""); // Xóa lỗi nếu nhập đúng
+      setError(""); 
     } else {
       setError("Registration number must be numbers only!");
     }
   };
 
-  // ✅ Gọi API nếu hợp lệ
+  
   const handleSearch = async () => {
     if (!registrationNumber) {
       setError("Please enter a registration number!");
@@ -44,17 +44,17 @@ const SearchScores = () => {
 
   return (
     <div className="p-5">
-      <h1 className="text-2xl font-bold mb-3">Student Registration Numbers</h1>
+      <h1 className="text-2xl font-bold mb-3 text-blue-950">Student Registration Numbers</h1>
       <input
         type="text"
         placeholder="Enter registration number"
         value={registrationNumber}
         onChange={handleInputChange}
-        className="border p-2 rounded"
+        className="border border-black p-2 rounded text-black"
       />
       <button
         onClick={handleSearch}
-        className="ml-3 bg-black text-white p-2 rounded"
+        className="ml-3 bg-blue-700 text-white p-2 rounded"
       >
         Submit
       </button>
@@ -62,7 +62,7 @@ const SearchScores = () => {
       {error && <p className="text-red-500 mt-3">{error}</p>}
 
       {showResult && student && (
-        <div className="mt-5 p-3">
+        <div className="mt-5 p-3 text-black">
           <h2 className="text-xl font-semibold mt-5">Detail scores of {student.sbd}</h2>
           <p className="inline mr-10">Toán: {student.toan}</p>
           <p className="inline mr-10">Ngữ Văn: {student.ngu_van}</p>

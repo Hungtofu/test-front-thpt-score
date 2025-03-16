@@ -19,11 +19,11 @@ const TopGroupA = () => {
       });
   }, []);
 
-  if (loading) return <p>Loading...</p>;
-  if (error) return <p>{error}</p>; 
+  if (loading) return <p className="text-black">Loading...</p>;
+  if (error) return <p className="text-red-700">{error}</p>; 
 
   return (
-    <div className="p-5">
+    <div className="p-5 text-black" >
       <h1 className="md:text-xl lg:text-2xl font-bold mb-3 ">🏆 Top 10 students of group A</h1>
       <table className="min-w-full border-collapse border border-gray-300 mt-5">
         <thead>

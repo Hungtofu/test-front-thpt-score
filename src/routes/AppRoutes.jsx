@@ -18,7 +18,7 @@ const AppRoutes = () => {
 
       {/* Mobile Menu Button */}
       <button
-        className="md:hidden p-3 bg-blue-800 text-white"
+        className="md:hidden p-3 bg-black text-white"
         onClick={() => setSidebarOpen(!isSidebarOpen)}
       >
         {isSidebarOpen ? "✖ Close" : "☰ Menu"}
